@@ -44,7 +44,13 @@ Setting the data set listener is done via ```addListener:``` and is demonstrated
 
 
 
+<<<<<<< HEAD
 ```
+=======
+
+
+```
+>>>>>>> 02f87bc5cae2d779bb9695dab31502f4df4d15f1
 (void) vocService:(nonnull id < VocService >)vocService objSetWillChange:(nonnull id < VocObjSet >) objSet added:(nonnull NSSet *) added updated:(nonnull NSSet *)updated removed:(nonnull NSSet *) removed objectsAfterChanges:(nonnull NSArray *)objectsAfterChanges
 {
     if ([ objSet isEqual:self.itemSet ]) {
@@ -57,8 +63,14 @@ Setting the data set listener is done via ```addListener:``` and is demonstrated
     if ([ objSet isEqual:self.itemSet ]) {
         NSLog(@"%ld items have changed",  (unsigned long)updated.count);
     }
+<<<<<<< HEAD
 } 
 
 ```
 
 
+=======
+} 
+
+```
+>>>>>>> 02f87bc5cae2d779bb9695dab31502f4df4d15f1
