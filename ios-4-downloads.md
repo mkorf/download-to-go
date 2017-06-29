@@ -57,7 +57,8 @@ Setting the data set listener is done via ```addListener:``` and is demonstrated
      objectsBefore:(nonnull NSArray *)objectsBefore
 {
     if ([ objSet isEqual:self.itemSet ]) {
-        NSLog(@"%ld items have changed",   (unsigned long)updated.count);
+        NSLog(@"%ld items have changed",  (unsigned long)updated.count);
     }
 } 
 ```
+Test
