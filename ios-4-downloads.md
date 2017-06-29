@@ -42,17 +42,15 @@ Data sets send notifications when items are added, changed, or removed. This is 
 
 Setting the data set listener is done via ```addListener:``` and is demonstrated in the sections below for sources, categories, and items. Listeners receive callbacks before and after any changes.
 
+
+
 ```
-(void)vocService:(nonnull id < VocService >)vocService objSetWillChange:(nonnull id < VocObjSet >)objSet
-                  added:(nonnull NSSet *)added updated:(nonnull NSSet *)updated removed:(nonnull NSSet *)removed
-    objectsAfterChanges:(nonnull NSArray *)objectsAfterChanges
+(void) vocService:(nonnull id < VocService >)vocService objSetWillChange:(nonnull id < VocObjSet >) objSet added:(nonnull NSSet *) added updated:(nonnull NSSet *)updated removed:(nonnull NSSet *) removed objectsAfterChanges:(nonnull NSArray *)objectsAfterChanges
 {
     if ([ objSet isEqual:self.itemSet ]) {
         NSLog(@"%ld items will change",   (unsigned long)updated.count);
     }
-}
-
-(void)vocService:(nonnull id < VocService >)vocService objSetDidChange:(nonnull id < VocObjSet >)objSet
+} (void)vocService:(nonnull id < VocService >)vocService objSetDidChange:(nonnull id < VocObjSet >)objSet
              added:(nonnull NSSet *)added updated:(nonnull NSSet *)updated removed:(nonnull NSSet *)removed
      objectsBefore:(nonnull NSArray *)objectsBefore
 {
@@ -60,5 +58,7 @@ Setting the data set listener is done via ```addListener:``` and is demonstrated
         NSLog(@"%ld items have changed",  (unsigned long)updated.count);
     }
 } 
+
 ```
-Test
+
+
